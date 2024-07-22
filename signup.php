@@ -16,7 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "New account created successfully!";
+        // Registration successful, set session variables if needed
+        session_start();
+        $_SESSION['email'] = $email;
+        $_SESSION['loggedin'] = true;
+
+        // Redirect to the dashboard
+        header("Location: dash.php");
+        exit;
     } else {
         echo "Error: " . $stmt->error;
     }
