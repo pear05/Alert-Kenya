@@ -18,11 +18,11 @@
             <div class="form-container">
                 <div class="form-box">
                     <h3>Create an account</h3>
-                    <form>
-                        <input type="email" placeholder="Email" required>
-                        <input type="text" placeholder="Username" required>
-                        <input type="tel" placeholder="Phone number" required>
-                        <input type="password" placeholder="Enter your password" required>
+                    <form action="signup.php" method="post">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="tel" name="telephone" placeholder="Phone number" required>
+                        <input type="password" name="password" placeholder="Enter your password" required>
                         <button type="submit">Create account</button>
                         <p>Already have an account? <a href="login.html">Log in</a></p>
                     </form>
