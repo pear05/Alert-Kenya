@@ -13,12 +13,25 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+
+
 </head>
+
+
+
+
+
+
+
 <body>
-    <h1>Welcome to your dashboard, <?php echo htmlspecialchars($_SESSION['email']); ?>!</h1>
+    <h1>Welcome to your dashboard, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
     <p><a href="logout.php">Log out</a></p>
     <!-- Add more dynamic content here -->
 </body>
 </html>
-    
+
+
+
+   
