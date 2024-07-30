@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="userdash.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span>Alert Kenya</span>
+        </div>
+        <div class="navbar-user">
+            <img src="user.png" alt="User" class="user-profile">
+            <span>Admin Name</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="content">
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+                <div class="notifications">
+                    <h2>Recent Alerts</h2>
+                    <ul id="alert-list">
+                        <!-- Alerts will be dynamically inserted here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

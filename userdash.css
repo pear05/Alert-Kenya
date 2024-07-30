@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-user .user-profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #444;
+    color: white;
+    height: 100vh;
+    padding: 20px 0;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav-links li a.active, .nav-links li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.map-container {
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 400px;
+}
+
+.notifications {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.notifications h2 {
+    margin-bottom: 20px;
+}
+
+#alert-list {
+    list-style: none;
+    padding: 0;
+}
+
+#alert-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
