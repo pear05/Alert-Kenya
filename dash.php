@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 include 'config.php';
+=======
+>>>>>>> a766ab3022e60a272f88efe2fe517c0af11606d7
 session_start();
 
 // Check if the user is logged in
@@ -7,6 +10,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: login.html");
     exit;
 }
+<<<<<<< HEAD
 
 // Fetch all alerts from the database
 $alerts = [];
@@ -17,6 +21,8 @@ if ($result->num_rows > 0) {
         $alerts[] = $row;
     }
 }
+=======
+>>>>>>> a766ab3022e60a272f88efe2fe517c0af11606d7
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +32,7 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <link rel="stylesheet" href="dash.css">
+<<<<<<< HEAD
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
@@ -94,3 +101,25 @@ if ($result->num_rows > 0) {
     <script src="script.js"></script>
 </body>
 </html>
+=======
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+    <h1>Welcome to your dashboard, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+    <p><a href="logout.php">Log out</a></p>
+    <!-- Add more dynamic content here -->
+</body>
+</html>
+
+
+
+   
+>>>>>>> a766ab3022e60a272f88efe2fe517c0af11606d7
