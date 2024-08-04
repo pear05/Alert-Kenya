@@ -1,0 +1,163 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff7bbd;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Profile Header */
+.profile-header {
+    background: linear-gradient(90deg, #7928ca, #ff7bbd);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-header .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-header .info h2 {
+    margin: 0;
+}
+
+.profile-header .info .role {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.profile-header .info .location {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.profile-header .info .stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.profile-header .info .stats div {
+    text-align: center;
+}
+
+.profile-header .info .stats div h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-header .info .stats div p {
+    margin: 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.profile-header .actions {
+    margin-left: auto;
+}
+
+.profile-header .actions button {
+    background-color: #ff7bbd;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-header .actions button:hover {
+    background-color: #ff1c7c;
+}
+
+/* Profile Details */
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile-details .left,
+.profile-details .right {
+    width: 48%;
+}
+
+.profile-details .left .section,
+.profile-details .right .section {
+    background-color: #2e2e3e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile-details .left .section h3,
+.profile-details .right .section h3 {
+    margin-top: 0;
+    color: #ff7bbd;
+}
+
+.profile-details .left .section p,
+.profile-details .right .section p {
+    margin: 10px 0;
+}
+
+/* Table styles */
+.profile-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-details th,
+.profile-details td {
+    padding: 10px;
+    text-align: left;
+}
+
+.profile-details th {
+    background-color: #3e3e5e;
+}
+
+.profile-details tr:nth-child(even) {
+    background-color: #2e2e4e;
+}
+
+.profile-details tr:hover {
+    background-color: #3e3e5e;
+}
+
+/* Buttons */
+.button {
+    background-color: #ff7bbd;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ff1c7c;
+}

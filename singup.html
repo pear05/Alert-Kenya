@@ -17,13 +17,54 @@
         <div class="right">
             <div class="form-container">
                 <div class="form-box">
-                    <h3>Create an account</h3>
-                    <form action="signup.php" method="post">
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="username" placeholder="Username" required>
-                        <input type="tel" name="telephone" placeholder="Phone number" required>
-                        <input type="password" name="password" placeholder="Enter your password" required>
-                        <button type="submit">Create account</button>
+                    <h1>Register</h1>
+            <form action="signup.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role">
+                    <option value="admin">Admin</option>
+                    <option value="teacher">Responder</option>
+                    <option value="student">citizen</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation</label>
+                <input type="text" id="designation" name="designation">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience (years)</label>
+                <input type="number" id="experience" name="experience">
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="2"></textarea>
+            </div>
+            <button type="submit">Register</button>
+        </form>
                         <p>Already have an account? <a href="login.html">Log in</a></p>
                     </form>
                 </div>
