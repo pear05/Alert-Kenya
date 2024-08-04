@@ -6,39 +6,62 @@ include 'config.php';
 session_start();
 
 // Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect and sanitize form data
-    $email = $_POST['email'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Prepare and bind
-    $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-
-    // Execute the statement
+    // Fetch the user from the database
+    $sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
-    $stmt->store_result();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
 
-    if ($stmt->num_rows == 1) {
-        $stmt->bind_result($hashed_password);
-        $stmt->fetch();
+    if ($user && password_verify($password, $user['password'])) {
+        // Authentication successful
+        session_start();
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['role'] = $user['role'];
 
-        // Verify the hashed password
-        if (password_verify($password, $hashed_password)) {
-            // Password is correct, set session variables
-            $_SESSION['email'] = $email;
-            $_SESSION['loggedin'] = true;
-            header("Location: dash.php"); // Redirect to the PHP dashboard
-            exit;
+        if ($user['role'] == 'admin') {
+            header("Location: admin_dashboard.php");
         } else {
-            echo "Invalid password.";
+            header("Location: user_dashboard.php");
         }
+        exit();
     } else {
-        echo "No account found with that email.";
+        echo "Invalid username or password";
     }
-
-    // Close statement and connection
-    $stmt->close();
-    $conn->close();
 }
 ?>
+
+
+<!-- // Fetch user from database
+$query = "SELECT * FROM users WHERE username = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+
+if ($user && password_verify($password, $user['password'])) {
+    // Set session variables
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['role'] = $user['role'];
+
+    // Redirect based on user role
+    if ($user['role'] == 'admin') {
+        header("Location: admin_dashboard.php");
+    } elseif ($user['role'] == 'teacher') {
+        header("Location: teacher_dashboard.php");
+    } elseif ($user['role'] == 'student') {
+        header("Location: student_dashboard.php");
+    } else {
+        header("Location: index.php"); // Default fallback
+    }
+} else {
+    // Invalid credentials
+    echo "Invalid username or password";
+}
+?> -->
