@@ -17,7 +17,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'citizen') {
 </head>
 <body>
   <div class="sidebar">
-    <h2 >Natizen menu</h2>
+    <h2 >Citizen menu</h2>
     <ul>
     <li><a href="">Dashboard</a></li>
     <li class="dropdown">
@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'citizen') {
   </div>
 
   <div class="content">
-    <h1>Welcome @ Natizen</h1>
+    <h1>Welcome @ Citizen</h1>
 
     
   </div>

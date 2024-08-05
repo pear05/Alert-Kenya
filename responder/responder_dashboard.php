@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'responder') {
 </head>
 <body>
   <div class="sidebar">
-    <h2 >Admin menu</h2>
+    <h2 >Responder menu</h2>
     <ul>
     <li><a href="">Dashboard</a></li>
     <li><a href="">Reports</a></li>
@@ -41,7 +41,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'responder') {
   </div>
 
   <div class="content">
-    <h1>Welcome @ admin</h1>
+    <h1>Welcome @ responder</h1>
 
     <div class="recent-card">
       <h2>Latest Activities</h2>
