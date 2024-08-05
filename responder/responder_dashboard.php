@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
-    header("Location: ../Alert-Kenya/admin/admin_dashboard.php");
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'responder') {
+    header("Location: login.html");
     exit();
 }
 ?>

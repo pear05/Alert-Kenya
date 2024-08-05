@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($user['role'] == 'admin') {
             header("Location: ../Alert-Kenya/admin/admin_dashboard.php");
         } elseif($user['role'] == 'responder') {
-            header("Location: ../Alert-Kenya/responder_dashboard.php");
+            header("Location: ../Alert-Kenya/responder/responder_dashboard.php");
         }
          elseif ($user['role'] == 'citizen') {
             header("Location: ../Alert-Kenya/user/user_dashboard.php");
