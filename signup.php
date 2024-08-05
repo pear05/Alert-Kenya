@@ -23,19 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($stmt->execute()) {
         // Registration successful, redirect based on role
         session_start();
-        $_SESSION['user_id'] = $stmt->insert_id;
-        $_SESSION['role'] = $role;
-
-        if ($role == 'admin') {
-            header("Location: admin_dashboard.php");
-        } elseif($role == 'responder'){
-            header("Location: responder_dashboard.php");
-        } elseif($role == 'citizen'){
-            header("Location: citizen_dashboard.php");
-        }
-        exit();
-    } else {
-        echo "Error: " . $stmt->error;
+        echo "<script>
+                alert('Registration successful');
+                window.location.href = 'login.html';
+              </script>";
     }
     // Close statement and connection
     $stmt->close();
